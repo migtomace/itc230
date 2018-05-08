@@ -6,25 +6,25 @@ var movies = [
     {Title : "Pineapple Express", Genre : "Comedy", Price : "$12.99"}
 ];
 
-exports.getAll = () => {
-    return movies;
-};
-
-exports.get = (movie) => {
-    movie = movie.toLowerCase();
+export function getAll(){
     for(var i = 0; i < movies.length; i++){
-        if(movies[i].Title.toLowerCase() == movie){
+        return movies[i];
+    }
+}
+
+export function get(movie){
+    for(var i = 0; i < movies.length; i++){
+        if(movies[i].Title == movie){
             return movies[i];
         }
     }
-};
+}
 
-exports.delete = (movie) => {
-    movie = movie.toLowerCase();
+export function deleteFunction(movie){
     for(var i = 0; i < movies.length; i++){
-        if(movies[i].Title.toLowerCase() == movie){
+        if(movies[i].Title == movie){
             movies.splice(i, 1);
             return movies;
         }
     }
-};
+}
