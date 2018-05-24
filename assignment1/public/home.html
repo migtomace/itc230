@@ -41,7 +41,12 @@
     }
     #list a {
       display:block;
-      margin:2em;
+      margin:1em 2em;
+      text-decoration: none;
+      padding:0.5em;
+    }
+    #list a:hover {
+      background: #efefef;
     }
   </style>
 </head>
@@ -56,6 +61,13 @@
     <input type="text" name="title" placeholder="movie title"/>
   </form>
   
+  <form method="post" action="/add">
+    <input type="text" name="title" placeholder="title" />
+    <input type="text" name="genre" placeholder="genre" />
+    <input type="text" name="price" placeholder="price" />
+    <input type="submit" value="ADD" />
+  </form>
+  
   <div id="list">
     <a href="/detail?title=holloween">Holloween</a>
     <a href="/detail?title=deadpool">Deadpool</a>
@@ -63,5 +75,10 @@
     <a href="/detail?title=titanic">Titanic</a>
     <a href="/detail?title=pineapple%20express">Pineapple Express</a>
   </div>
+  
+  <div id="myList">
+    
+  </div>
+
 </body>
 </html>
